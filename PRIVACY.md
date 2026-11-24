@@ -26,3 +26,7 @@ The app ID is neutral and commits use the GitHub account's no-reply address.
 Do not commit real credentials, app data, screenshots of private sessions,
 device dumps, or signing material. Keep `local.properties`, environment files,
 build outputs, and keys ignored. Check staged changes before pushing.
+
+Release signing credentials are supplied through environment variables. The
+private keystore and its credentials stay outside version control and release
+assets. APK signing certificates are public verification data, not private keys.
