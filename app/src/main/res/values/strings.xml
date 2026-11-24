@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OpenCode Mobile</string>
+    <string name="matrix_kicker">[ OC ]  /  ANDROID</string>
+    <string name="matrix_title">OpenCode\nMobile_</string>
+    <string name="matrix_subtitle">Your phone. Your code.\nNo laptop in the loop.</string>
+    <string name="matrix_setup_label">01 / PREPARE THE RUNTIME</string>
+    <string name="matrix_setup_help">Open Termux once first. Allow commands below, follow the one-time connection instructions, then install OpenCode.</string>
+    <string name="matrix_launch_label">02 / ENTER THE CONSTRUCT</string>
+    <string name="matrix_launch_help">Open your workspace and start a conversation.</string>
+    <string name="matrix_log_label">SYSTEM / ACTIVITY</string>
+    <string name="matrix_log_idle">&gt; Awaiting your command.</string>
+    <string name="matrix_bridge_label">MANUAL / TERMUX BRIDGE</string>
+    <string name="matrix_footer">ON-DEVICE RUNTIME / POWERED BY TERMUX</string>
+    <string name="install_termux">Install Termux ↗</string>
+    <string name="allow_commands">Allow Termux commands</string>
+    <string name="check_connection">Check Termux connection</string>
+    <string name="install_opencode">Install OpenCode</string>
+    <string name="reinstall_opencode">Reinstall OpenCode</string>
+    <string name="opencode_ready">OpenCode installed ✓</string>
+    <string name="start_opencode">Launch OpenCode →</string>
+    <string name="working">Working…</string>
+    <string name="turn_off">Turn off</string>
+    <string name="turn_off_title">Turn off OpenCode?</string>
+    <string name="turn_off_message">This stops this server’s running AI tasks and terminals, then closes OpenCode Mobile. Chats and files are kept. Other Termux sessions and apps are left alone.</string>
+    <string name="turned_off">OpenCode is off. Tap Launch OpenCode to start it again.</string>
+    <string name="open_termux">Open Termux ↗</string>
+    <string name="copy_command">Copy &amp; open Termux</string>
+    <string name="bridge_help">Copy the command, paste it in Termux, and press Enter. Return here and tap Check Termux connection. This allows apps you authorize to run Termux commands.</string>
+    <string name="unsupported_phone">This runtime requires Android 10 or newer, a 64-bit ARM phone, and 64-bit ARM Termux. This device does not report ARM64 support.</string>
+    <string name="intro">Everything runs on this phone. Termux does the work; this app is the screen.
+
+Use Termux from F-Droid or its official GitHub releases. Open it once before setup. Install OpenCode adds a third-party OpenCode 2 build and trusts its package repository (bd-loser/opencode-bionic).
+\n\nProjects start in ~/projects inside Termux. For shared phone folders, run “termux-setup-storage” there once.
+\n\nRequires Android 10 or newer and 64-bit ARM Termux. Keep Android System WebView updated. Internet is needed for installation and online AI providers.
+\n\nTermux keeps the server running through its own notification. Android may still stop it. Use the power icon to stop this app’s server without affecting other Termux sessions. Back returns here.</string>
+</resources>

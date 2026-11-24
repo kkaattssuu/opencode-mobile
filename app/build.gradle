@@ -1,0 +1,17 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'app.opencodemobile'
+    compileSdk 35
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    defaultConfig {
+        applicationId 'app.opencodemobile'
+        minSdk 29
+        targetSdk 35
+        versionCode 7
+        versionName '1.0.6'
+        testInstrumentationRunner 'app.opencodemobile.PhoneCheck'
+    }
+}

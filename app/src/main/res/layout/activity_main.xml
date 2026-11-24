@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/matrix_black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:text="@string/app_name"
+            android:textSize="14sp"
+            android:textColor="@color/matrix_green" />
+        <ImageButton
+            android:id="@+id/bTurnOff"
+            style="@style/MatrixIconButton"
+            android:src="@drawable/ic_power"
+            android:contentDescription="@string/turn_off"
+            android:tooltipText="@string/turn_off" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    <WebView
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/setup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/MatrixEyebrow"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/matrix_kicker" />
+                <ImageView
+                    android:id="@+id/smiley"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/smiley_blink"
+                    android:importantForAccessibility="no"
+                    android:contentDescription="@null" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="monospace"
+                android:text="@string/matrix_title"
+                android:textColor="@color/matrix_green"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:letterSpacing="-0.05" />
+
+            <TextView
+                style="@style/MatrixBody"
+                android:text="@string/matrix_subtitle"
+                android:textSize="16sp" />
+
+            <LinearLayout style="@style/MatrixCard">
+                <TextView
+                    style="@style/MatrixEyebrow"
+                    android:text="@string/matrix_setup_label" />
+                <TextView
+                    style="@style/MatrixBody"
+                    android:text="@string/matrix_setup_help" />
+                <Button
+                    android:id="@+id/bTermux"
+                    style="@style/MatrixButton"
+                    android:text="@string/install_termux" />
+                <Button
+                    android:id="@+id/bGrant"
+                    style="@style/MatrixButton"
+                    android:text="@string/allow_commands" />
+                <Button
+                    android:id="@+id/bInstall"
+                    style="@style/MatrixButton"
+                    android:text="@string/install_opencode" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/MatrixCard">
+                <TextView
+                    style="@style/MatrixEyebrow"
+                    android:text="@string/matrix_launch_label" />
+                <TextView
+                    style="@style/MatrixBody"
+                    android:text="@string/matrix_launch_help" />
+                <Button
+                    android:id="@+id/bStart"
+                    style="@style/MatrixPrimary"
+                    android:text="@string/start_opencode" />
+                <ProgressBar
+                    android:id="@+id/progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="12dp"
+                    android:indeterminate="true"
+                    android:visibility="gone"
+                    android:contentDescription="@string/working" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/MatrixCard">
+                <TextView
+                    style="@style/MatrixEyebrow"
+                    android:text="@string/matrix_log_label" />
+                <TextView
+                    android:id="@+id/log"
+                    style="@style/MatrixBody"
+                    android:minHeight="48dp"
+                    android:fontFamily="monospace"
+                    android:text="@string/matrix_log_idle"
+                    android:textColor="@color/matrix_text"
+                    android:textIsSelectable="true"
+                    android:accessibilityLiveRegion="polite"
+                    android:textSize="12sp" />
+                <Button
+                    android:id="@+id/bOpenTermux"
+                    style="@style/MatrixButton"
+                    android:text="@string/open_termux" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pasteBox"
+                style="@style/MatrixCard"
+                android:visibility="gone">
+                <TextView
+                    style="@style/MatrixEyebrow"
+                    android:text="@string/matrix_bridge_label" />
+                <TextView
+                    style="@style/MatrixBody"
+                    android:text="@string/bridge_help" />
+                <TextView
+                    android:id="@+id/paste"
+                    style="@style/MatrixBody"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/matrix_text"
+                    android:textIsSelectable="true"
+                    android:textSize="12sp" />
+                <Button
+                    android:id="@+id/bCopy"
+                    style="@style/MatrixButton"
+                    android:text="@string/copy_command" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/MatrixBody"
+                android:layout_marginTop="24dp"
+                android:text="@string/intro"
+                android:textSize="12sp" />
+            <TextView
+                style="@style/MatrixEyebrow"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/matrix_footer" />
+        </LinearLayout>
+    </ScrollView>
+    </FrameLayout>
+</LinearLayout>

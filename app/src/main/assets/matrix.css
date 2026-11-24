@@ -1,0 +1,63 @@
+/* Keep critical/warning colors and code/diff highlighting intact. */
+html:root {
+  color-scheme: dark;
+  --v2-background-bg-deep: #050a07 !important;
+  --v2-background-bg-base: #080f0b !important;
+  --v2-background-bg-layer-01: #0c1610 !important;
+  --v2-background-bg-layer-02: #111f16 !important;
+  --v2-background-bg-layer-03: #172a1d !important;
+  --v2-background-bg-layer-04: #203829 !important;
+  --v2-background-bg-button-neutral: #172a1d !important;
+  --v2-background-bg-code-path: #111f16 !important;
+  --v2-background-bg-contrast: #52ff95 !important;
+  --v2-background-bg-icon-button-contrast: #52ff95 !important;
+  --v2-background-bg-inverse: #dff6e7 !important;
+  --v2-background-bg-accent: #52ff95 !important;
+  --v2-text-text-base: #c2dccb !important;
+  --v2-text-text-contrast: #e7ffef !important;
+  --v2-text-text-muted: #a0b9a9 !important;
+  --v2-text-text-faint: #89a391 !important;
+  --v2-text-text-inverse: #050a07 !important;
+  --v2-text-text-accent: #52ff95 !important;
+  --v2-text-text-accent-hover: #a4ffc6 !important;
+  --v2-text-text-code-path: #b5e4c6 !important;
+  --v2-text-text-code-accent: #52ff95 !important;
+  --v2-border-border-base: #254733 !important;
+  --v2-border-border-muted: #1b3023 !important;
+  --v2-border-border-strong: #39674a !important;
+  --v2-border-border-focus: #52ff95 !important;
+  --v2-icon-icon-base: #b5d9c2 !important;
+  --v2-icon-icon-contrast: #e7ffef !important;
+  --v2-icon-icon-muted: #a0b9a9 !important;
+  --v2-icon-icon-faint: #89a391 !important;
+  --v2-icon-icon-accent: #52ff95 !important;
+  --v2-icon-icon-accent-hover: #a4ffc6 !important;
+  --v2-icon-icon-inverse: #050a07 !important;
+  --background-base: #050a07 !important;
+  --background-weak: #0c1610 !important;
+  --background-strong: #111f16 !important;
+  --background-stronger: #172a1d !important;
+  --surface-base: #0c1610 !important;
+  --surface-raised-base: #111f16 !important;
+  --surface-float-base: #111f16 !important;
+  --surface-inset-base: #050a07 !important;
+  --surface-brand-base: #52ff95 !important;
+  --text-base: #c2dccb !important;
+  --text-strong: #e7ffef !important;
+  --text-weak: #a0b9a9 !important;
+  --text-interactive-base: #52ff95 !important;
+  --text-on-brand-base: #050a07 !important;
+  --border-base: #254733 !important;
+  --border-focus: #52ff95 !important;
+  --icon-base: #b5d9c2 !important;
+}
+html, body {
+  background-color: #050a07 !important;
+}
+::selection {
+  background: #245b38;
+  color: #e7ffef;
+}
+:focus-visible {
+  outline-color: #52ff95;
+}

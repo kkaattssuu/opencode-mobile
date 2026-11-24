@@ -1,0 +1,8 @@
+<resources>
+    <color name="matrix_black">#050A07</color>
+    <color name="matrix_surface">#0C1610</color>
+    <color name="matrix_border">#254733</color>
+    <color name="matrix_green">#52FF95</color>
+    <color name="matrix_text">#DFF6E7</color>
+    <color name="matrix_muted">#A0B9A9</color>
+</resources>

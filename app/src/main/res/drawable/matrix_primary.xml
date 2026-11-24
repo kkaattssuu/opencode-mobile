@@ -1,0 +1,25 @@
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="#40050A07">
+    <item>
+        <selector>
+            <item android:state_enabled="false">
+                <shape>
+                    <solid android:color="#20372A" />
+                    <corners android:radius="10dp" />
+                </shape>
+            </item>
+            <item android:state_focused="true">
+                <shape>
+                    <solid android:color="#A4FFC6" />
+                    <stroke android:width="2dp" android:color="@color/matrix_text" />
+                    <corners android:radius="10dp" />
+                </shape>
+            </item>
+            <item>
+                <shape>
+                    <solid android:color="@color/matrix_green" />
+                    <corners android:radius="10dp" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>
