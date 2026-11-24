@@ -1,3 +1,5 @@
+<img src="docs/icon.png" alt="OpenCode Mobile icon" width="96" height="96">
+
 # OpenCode Mobile
 
 A small Android front end for **OpenCode 2 running on the phone in Termux**.
@@ -6,7 +8,7 @@ still need internet unless you configure a local provider.
 
 ## Install
 
-1. Install `app/build/outputs/apk/debug/app-debug.apk`.
+1. Download **OpenCode-Mobile.apk** from [Releases](https://github.com/kkaattssuu/opencode-mobile/releases/latest) and install it.
 2. Install [Termux from F-Droid](https://f-droid.org/packages/com.termux/)
    or its official GitHub releases, and open it once.
 3. In this app, tap **Allow Termux commands** and grant Android's
@@ -86,7 +88,14 @@ javac -d build/checks app/src/main/java/app/opencodemobile/ServerConnection.java
 java -ea -cp build/checks app.opencodemobile.ServerConnectionCheck
 ```
 
-The APK is debug-signed for local testing, not a production or Play Store release.
+For a signed release, supply `OPENCODE_STORE_FILE`, `OPENCODE_STORE_PASSWORD`,
+`OPENCODE_KEY_ALIAS`, and `OPENCODE_KEY_PASSWORD` through your private environment,
+then run `./gradlew assembleRelease lintRelease`. Missing signing credentials
+cause release signing to fail; they are never committed. Keep a secure private
+backup of the release key: losing it can prevent future app updates.
+
+Published release APKs have debugging disabled and are signed with a dedicated
+release key. `assembleDebug` remains available for local development.
 Host checks cover the HTTP/auth transport, setup/start scripts and theme contrast.
 Fresh-install tests use an empty mocked Termux prefix with no host tool fallback:
 dependencies absent, successful install, offline failure/retry, and preservation
@@ -106,6 +115,9 @@ If a development build already runs a server on port 4096, stop it with that
 build's power button before launching this one. Do not clear data or uninstall
 anything to switch builds.
 
-Prebuilt test APKs are debug-signed, not production releases. A source build
-uses your own local debug key, which may not update a differently signed APK.
+Earlier 1.0.6 downloads were debug-signed. Android may reject an in-place update
+from those builds to the differently signed release. Do not uninstall or clear
+data to work around a signature mismatch; keep the earlier build and arrange a
+data-preserving migration before switching. This does not affect new installs.
+Future release-signed updates must use the same release key.
 See [PRIVACY.md](PRIVACY.md) for what is and is not included.
